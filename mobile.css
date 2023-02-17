@@ -10,22 +10,50 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 85%;
+    margin: 0 2rem;
     background-color: #15273f;
     border-radius: 10px;
     margin: 4rem auto;
 }
 
 .card-container .img-container {
+    position: relative;
     display: flex;
     justify-content: center;
 }
 
 .card-container .img-container img {
-    display: flex;
+    display: block;
     width: 85%;
     margin-top: 1.8rem;
     border-radius: 10px;
 }
+
+.card-container .img-container .img-background {
+    position: absolute;
+    width: 85%;
+    height: 90%;
+    background-color: rgba(0, 255, 248, 0.5);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 1.8rem;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.card-container .img-container .img-background img {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    width: 10%;
+}
+
+.img-container:hover .img-background {
+    opacity: 1;
+}
+
+
 
 .text-container {
     display: flex;
@@ -40,6 +68,10 @@ body {
     color: white;
     font-size: 1.6rem;
     margin-bottom: -0.1rem;
+}
+
+.text-container h2:hover {
+    color: #00fff8;
 }
 
 .text-container p {
@@ -125,6 +157,10 @@ body {
     font-size: medium;
 }
 
+.info-user-container a:hover {
+    color: #00fff8;
+}
+
 
 
 
@@ -136,4 +172,14 @@ footer .attribution {
     width: 100%;
     background-color: #0c172a;
     color: white;
+}
+
+
+
+
+@media (min-width: 425px) {
+    .card-container {
+        max-width: 350px;
+        margin-top: 8rem;
+    }
 }
